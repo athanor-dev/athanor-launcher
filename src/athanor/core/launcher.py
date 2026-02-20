@@ -86,25 +86,13 @@ class Launcher(GObject.GObject):
         if self.state!=LauncherState.RUNNING or (not self._process):
             return
         logger.info("停止游戏")
-        pgid = os.getpgid(self._process.pid)
-        os.killpg(pgid, signal.SIGTERM)
+        self._process.kill()
 
     
     def _worker_watch(self):
         if not self._process:
             return
-        pgid = os.getpgid(self._process.pid)
         self._process.wait()
-        try:
-            os.killpg(pgid, 0)
-        except ProcessLookupError:
-            GLib.idle_add(self._on_game_exit)
-        time.sleep(1)
-        try:
-            os.killpg(pgid, 0)
-            os.killpg(pgid, signal.SIGKILL)
-        except ProcessLookupError:
-            pass
         GLib.idle_add(self._on_game_exit)
 
     def _on_game_exit(self):
