@@ -1,4 +1,4 @@
-app-id: io.github.athanor_dev.athanor_launcher
+app-id: io.github.athanor_dev.athanor-launcher
 runtime: org.gnome.Platform
 runtime-version: '49'
 sdk: org.gnome.Sdk
@@ -8,9 +8,11 @@ command: athanor
 finish-args:
   - --socket=wayland
   - --share=ipc
+  - --share=network
   - --socket=pulseaudio
   - --device=dri
   - --filesystem=home
+  - --socket=fallback-x11
   - --env=NWJS_DIR=/app/nwjs/
 
 modules:

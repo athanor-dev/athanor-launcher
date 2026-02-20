@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-    <id>io.github.athanor_dev.athanor_launcher</id>
+    <id>io.github.athanor_dev.athanor-launcher</id>
 
     <name>Athanor</name>
     <summary>启动 rpgmaker 游戏</summary>
@@ -14,7 +14,7 @@
         </p>
     </description>
 
-    <launchable type="desktop-id">io.github.athanor_dev.athanor_launcher.desktop</launchable>
+    <launchable type="desktop-id">io.github.athanor_dev.athanor-launcher.desktop</launchable>
     <screenshots>
         <screenshot type="default">
             <image>
@@ -22,8 +22,8 @@
         </screenshot>
     </screenshots>
 
-    <url type="homepage">https://github.com/athanor_dev/athanor_launcher</url>
-    <url type="bugtracker">https://github.com/athanor_dev/athanor_launcher/issues</url>
+    <url type="homepage">https://github.com/athanor-dev/athanor-launcher</url>
+    <url type="bugtracker">https://github.com/athanor-dev/athanor-launcher/issues</url>
     
     <content_rating type="oars-1.1" />
     <releases>
