@@ -1,0 +1,39 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $AthanorMainWindow: Adw.ApplicationWindow {
+  Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+
+    content: Adw.PreferencesPage {
+      Adw.PreferencesGroup {
+        Adw.ActionRow dir_row {
+          activatable: true;
+          icon-name: "folder-symbolic";
+          title: "游戏目录";
+          activated => $on_dir_row_activated();
+        }
+      }
+
+      Adw.PreferencesGroup {
+        Adw.SwitchRow network_switch {
+          icon-name: "network-wired-symbolic";
+          title: "网络";
+        }
+
+        Adw.SwitchRow gpu_switch {
+          active: true;
+          icon-name: "computer-symbolic";
+          title: "GPU";
+        }
+      }
+
+      Adw.PreferencesGroup {
+        Adw.ButtonRow launch_button {
+          activated => $on_launch_button_activated();
+        }
+      }
+    };
+  }
+}
