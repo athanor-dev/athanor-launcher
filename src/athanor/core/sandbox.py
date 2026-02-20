@@ -18,6 +18,10 @@ class FlatpakSpawnSandbox:
     def no_network(self)->Self:
         self._cmd.append("--no-network")
         return self
+    
+    def watch_bus(self)->Self:
+        self._cmd.append(f"--watch-bus")
+        return self
 
     def expose(self,path:Path,w=False)->Self:
         if w:
