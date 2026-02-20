@@ -2,8 +2,8 @@
 Type=Application
 Name=Athanor
 Comment=启动 rpgmaker 游戏
-Icon=io.github.athanor_dev.athanor-launcher
+Icon=io.github.athanor_dev.athanor_launcher
 Exec=athanor
-StartupWMClass=io.github.athanor_dev.athanor-launcher
+StartupWMClass=io.github.athanor_dev.athanor_launcher
 Terminal=false
 Categories=Game;Utility;

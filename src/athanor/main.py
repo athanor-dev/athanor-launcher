@@ -35,7 +35,7 @@ class App(Adw.Application):
         win.present()
 
 if __name__ == "__main__":
-    GLib.set_prgname("io.github.athanor_dev.athanor-launcher")
+    GLib.set_prgname(config.APP_ID)
     GLib.set_application_name("Athanor")
 
     app=App()

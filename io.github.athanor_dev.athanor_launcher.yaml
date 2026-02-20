@@ -1,4 +1,4 @@
-app-id: io.github.athanor_dev.athanor-launcher
+app-id: io.github.athanor_dev.athanor_launcher
 runtime: org.gnome.Platform
 runtime-version: '49'
 sdk: org.gnome.Sdk

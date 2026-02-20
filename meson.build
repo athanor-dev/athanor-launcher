@@ -3,7 +3,7 @@ project('athanor',
   meson_version: '>= 0.59.0'
 )
 
-app_id = 'io.github.athanor_dev.athanor-launcher'
+app_id = 'io.github.athanor_dev.athanor_launcher'
 
 python = import('python')
 gnome = import('gnome')
@@ -73,12 +73,12 @@ configure_file(
 )
 
 install_data(
-    'data/io.github.athanor_dev.athanor-launcher.desktop',
+    'data/io.github.athanor_dev.athanor_launcher.desktop',
     install_dir: join_paths(get_option('datadir'), 'applications')
 )
 
 install_data(
-    'data/io.github.athanor_dev.athanor-launcher.svg',
+    'data/io.github.athanor_dev.athanor_launcher.svg',
     install_dir: join_paths(get_option('datadir'), 'icons/hicolor/scalable/apps')
 )
 
