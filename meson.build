@@ -82,6 +82,11 @@ install_data(
     install_dir: join_paths(get_option('datadir'), 'icons/hicolor/scalable/apps')
 )
 
+install_data(
+    'data/io.github.athanor_dev.athanor_launcher.metainfo.xml',
+    install_dir: join_paths(get_option('datadir'), 'metainfo')
+)
+
 
 run_target('run_app',
   command: [

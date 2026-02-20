@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>io.github.athanor_dev.athanor_launcher</id>
+
+    <name>Athanor</name>
+    <summary>启动 rpgmaker 游戏</summary>
+
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>AGPL-3.0-or-later</project_license>
+
+    <description>
+        <p>
+            启动 rpgmaker 游戏
+        </p>
+    </description>
+
+    <launchable type="desktop-id">io.github.athanor_dev.athanor-launcher.desktop</launchable>
+    <screenshots>
+        <screenshot type="default">
+            <image>
+                https://github.com/athanor-dev/assets/blob/main/picture/screenshots/1.png?raw=true</image>
+        </screenshot>
+    </screenshots>
+    <content_rating type="oars-1.1" />
+    <releases>
+        <release version="0.1.0" date="2026-2-20" />
+    </releases>
+</component>
