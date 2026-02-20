@@ -21,6 +21,10 @@
                 https://github.com/athanor-dev/assets/blob/main/picture/screenshots/1.png?raw=true</image>
         </screenshot>
     </screenshots>
+
+    <url type="homepage">https://github.com/athanor_dev/athanor_launcher</url>
+    <url type="bugtracker">https://github.com/athanor_dev/athanor_launcher/issues</url>
+    
     <content_rating type="oars-1.1" />
     <releases>
         <release version="0.1.0" date="2026-2-20" />
