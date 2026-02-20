@@ -14,7 +14,7 @@
         </p>
     </description>
 
-    <launchable type="desktop-id">io.github.athanor_dev.athanor-launcher.desktop</launchable>
+    <launchable type="desktop-id">io.github.athanor_dev.athanor_launcher.desktop</launchable>
     <screenshots>
         <screenshot type="default">
             <image>
