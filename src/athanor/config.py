@@ -1,0 +1,6 @@
+PKGDATADIR = "PKGDATADIR 会在构建时设置"
+VERSION = "VERSION 会在构建时设置"
+APP_ID = "APP_ID 会在构建时设置"
+RESOURCE_PATH = "RESOURCE_PATH 会在构建时设置"
+NWJS_DIR = "NWJS_DIR 会在构建时设置"
+assert(False),"这玩意用来类型提示，不要真的运行它"

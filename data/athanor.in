@@ -1,0 +1,4 @@
+#!/bin/sh
+export PYTHONPATH="@PKGDATADIR@:$PYTHONPATH"
+
+exec @PYTHON@ "@PKGDATADIR@/athanor/main.py" "$@"
