@@ -22,6 +22,8 @@ class AthanorMainWindow(Adw.ApplicationWindow):
 
     launch_button:Adw.ButtonRow=Gtk.Template.Child("launch_button")
 
+    warning_label:Gtk.Label=Gtk.Template.Child("warning_label")
+    
     def __init__(self,**args):
         super().__init__(**args)
         self.launcher=Launcher(Path(NWJS_DIR))
@@ -48,6 +50,10 @@ class AthanorMainWindow(Adw.ApplicationWindow):
             row.set_subtitle(path)
             logger.debug(f"选择目录 {path}")
             self.launcher.set_game_path(Path(path))
+            if Path(path).is_relative_to(Path("/run/user/")):
+                self.warning_label.set_visible(True)
+            else:
+                self.warning_label.set_visible(False)
         except GLib.Error as e:
             logger.debug(f"{e}")
         pass

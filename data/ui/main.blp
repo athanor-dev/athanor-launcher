@@ -14,6 +14,13 @@ template $AthanorMainWindow: Adw.ApplicationWindow {
           title: "游戏目录";
           activated => $on_dir_row_activated();
         }
+        Gtk.Label warning_label{
+              wrap: true;
+              wrap-mode: word_char;
+              label: "由于权限问题，目录可能无法正常启动。\n建议您手动授权 Athanor 访问目录，并完全重启 Athanor 。";
+              visible: false;
+              styles ["warning"]
+        }
       }
 
       Adw.PreferencesGroup {
