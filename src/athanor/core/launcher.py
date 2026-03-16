@@ -51,22 +51,22 @@ class Launcher(GObject.GObject):
         self._game_path:Path|None=None
         self._process:subprocess.Popen|None=None
     
-    def set_game_path(self,game_paht:Path)->None:
-        if check_game_path(game_paht):
-            self._game_path=game_paht
-            logger.info(f"游戏目录设为 {game_paht}")
+    def set_game_path(self,game_path:Path)->None:
+        if check_game_path(game_path):
+            self._game_path=game_path
+            logger.info(f"Game directory set to {game_path}")
             self.state=LauncherState.READY
         else:
-            logger.warning("{path} 不是游戏目录")
+            logger.warning("{path} is not a valid game directory")
 
     
     def start_game(self,network:bool=False,gpu:bool=False):
         logger.debug(F"launcher.state={self.state}")
         logger.debug(F"launcher._game_path={self._game_path}")
         if self.state!=LauncherState.READY or (not self._game_path):
-            logger.warning("还没有准备好启动游戏")
+            logger.warning("Not ready to launch the game yet")
             return
-        logger.info(f"启动游戏")
+        logger.info(f"Launch game")
         logger.info(f"nwjs: {self._nwjs_path}")
         logger.info(f"game: {self._game_path}")
         self._process = popen(self._game_path,self._nwjs_path,
@@ -85,7 +85,7 @@ class Launcher(GObject.GObject):
     def stop_game(self):
         if self.state!=LauncherState.RUNNING or (not self._process):
             return
-        logger.info("停止游戏")
+        logger.info("stop game")
         self._process.kill()
 
     
@@ -99,8 +99,8 @@ class Launcher(GObject.GObject):
         assert(self._process)
         return_code=self._process.returncode
         if return_code==0:
-            logger.info(f"nwjs进程已退出 return code: {self._process.returncode}")
+            logger.info(f"NW.js process exited with return code: {self._process.returncode}")
         else :
-            logger.warning(f"nwjs进程已退出 return code: {self._process.returncode}")
+            logger.warning(f"NW.js process exited with return code: {self._process.returncode}")
         self._process=None
         self.state=LauncherState.READY

@@ -39,7 +39,7 @@ class AthanorMainWindow(Adw.ApplicationWindow):
     def on_dir_row_activated(self, row):
 
         dialog = Gtk.FileDialog()
-        dialog.set_title("选择游戏目录")
+        dialog.set_title("Select Game Directory")
         dialog.select_folder(self, None, self.on_folder_selected, row)
 
     def on_folder_selected(self, dialog,result,row:Adw.ActionRow)->None:
@@ -48,7 +48,7 @@ class AthanorMainWindow(Adw.ApplicationWindow):
             path=file.get_path()
             assert(path)
             row.set_subtitle(path)
-            logger.debug(f"选择目录 {path}")
+            logger.debug(f"Selected directory: {path}")
             self.launcher.set_game_path(Path(path))
             if Path(path).is_relative_to(Path("/run/user/")):
                 self.warning_label.set_visible(True)

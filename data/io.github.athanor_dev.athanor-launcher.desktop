@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Athanor
-Comment=启动 rpgmaker 游戏
+Comment=Launch RPG Maker Game
 Icon=io.github.athanor_dev.athanor-launcher
 Exec=athanor
 StartupWMClass=io.github.athanor_dev.athanor-launcher

@@ -3,7 +3,7 @@
     <id>io.github.athanor_dev.athanor-launcher</id>
 
     <name>Athanor</name>
-    <summary>启动 rpgmaker 游戏</summary>
+    <summary>Launch RPG Maker Game</summary>
 
     <developer id="io.github.athanor_dev">
         <name>Athanor Dev</name>
@@ -14,7 +14,7 @@
 
     <description>
         <p>
-            启动 rpgmaker 游戏
+            Launch RPG Maker Game
         </p>
     </description>
 
