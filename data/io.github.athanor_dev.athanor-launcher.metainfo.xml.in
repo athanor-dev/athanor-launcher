@@ -21,13 +21,14 @@
     <launchable type="desktop-id">io.github.athanor_dev.athanor-launcher.desktop</launchable>
     <screenshots>
         <screenshot type="default">
-            <image>
-                https://raw.githubusercontent.com/athanor-dev/assets/refs/heads/main/picture/screenshots/1.png</image>
+            <image>https://raw.githubusercontent.com/athanor-dev/assets/refs/heads/main/picture/screenshots/1.png</image>
+            <caption>Athanor main interface</caption>
         </screenshot>
     </screenshots>
 
     <url type="homepage">https://github.com/athanor-dev/athanor-launcher</url>
     <url type="bugtracker">https://github.com/athanor-dev/athanor-launcher/issues</url>
+    <url type="vcs-browser">https://github.com/athanor-dev/athanor-launcher</url>
 
     <content_rating type="oars-1.1" />
     <releases>
