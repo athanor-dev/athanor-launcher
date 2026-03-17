@@ -1,0 +1,53 @@
+#
+#  <>, YEAR-2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unnamed project\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-17 18:29+0800\n"
+"PO-Revision-Date: 2026-03-17 20:17+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Gtranslator 49.0\n"
+
+#: data/ui/main.blp:14
+msgid "Game Directory"
+msgstr "游戏目录"
+
+#: data/ui/main.blp:21
+msgid ""
+"Due to permission constraints, the directory may not open correctly.\n"
+"It is recommended to manually grant Athanor access and fully restart the "
+"application."
+msgstr ""
+"由于权限问题，目录可能无法正常启动。\n"
+"建议您手动授权 Athanor 访问目录，并完全重启 Athanor 。"
+
+#: data/ui/main.blp:33
+msgid "Network"
+msgstr "网络"
+
+#: data/ui/main.blp:39
+msgid "Hardware Acceleration (GPU)"
+msgstr "硬件加速（GPU）"
+
+#: src/athanor/ui/AthanorMainWindow.py:43
+msgid "Select Game Directory"
+msgstr "选择游戏目录"
+
+#: src/athanor/ui/AthanorMainWindow.py:96
+#: src/athanor/ui/AthanorMainWindow.py:105
+msgid "Launch"
+msgstr "启动"
+
+#: src/athanor/ui/AthanorMainWindow.py:114
+msgid "Stop"
+msgstr "停止"
+
+msgid "i18n ok"
+msgstr "i18n 正常"

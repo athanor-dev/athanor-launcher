@@ -11,14 +11,14 @@ template $AthanorMainWindow: Adw.ApplicationWindow {
                 Adw.ActionRow dir_row {
                     activatable: true;
                     icon-name: "folder-symbolic";
-                    title: "Game Directory";
+                    title: _("Game Directory");
                     activated => $on_dir_row_activated();
                 }
 
                 Gtk.Label warning_label {
                     wrap: true;
                     wrap-mode: word_char;
-                    label: "Due to permission constraints, the directory may not open correctly.\nIt is recommended to manually grant Athanor access and fully restart the application.";
+                    label: _("Due to permission constraints, the directory may not open correctly.\nIt is recommended to manually grant Athanor access and fully restart the application.");
                     visible: false;
 
                     styles [
@@ -30,13 +30,13 @@ template $AthanorMainWindow: Adw.ApplicationWindow {
             Adw.PreferencesGroup {
                 Adw.SwitchRow network_switch {
                     icon-name: "network-wired-symbolic";
-                    title: "Network";
+                    title: _("Network");
                 }
 
                 Adw.SwitchRow gpu_switch {
                     active: true;
                     icon-name: "computer-symbolic";
-                    title: "Hardware Acceleration (GPU)";
+                    title: _("Hardware Acceleration (GPU)");
                 }
             }
 

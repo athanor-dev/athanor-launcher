@@ -4,7 +4,6 @@ runtime-version: '49'
 sdk: org.gnome.Sdk
 command: athanor
 
-
 finish-args:
   - --socket=wayland
   - --share=ipc

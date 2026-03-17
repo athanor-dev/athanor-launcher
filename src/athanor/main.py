@@ -1,10 +1,13 @@
 import sys
 from pathlib import Path
 from athanor import config
+from athanor.core.i18n import setup_i18n
 import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 from gi.repository import Gio, Adw, GLib #type:ignore
+import logging
+logging.basicConfig(level=logging.DEBUG)
 
 class App(Adw.Application):
     def __init__(self):
@@ -37,6 +40,8 @@ class App(Adw.Application):
 if __name__ == "__main__":
     GLib.set_prgname(config.APP_ID)
     GLib.set_application_name("Athanor")
+
+    setup_i18n()
 
     app=App()
     app.run(sys.argv)

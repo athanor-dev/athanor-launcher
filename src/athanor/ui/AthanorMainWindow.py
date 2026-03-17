@@ -8,6 +8,7 @@ from gi.repository import Gtk, Adw, GObject,GLib,Gio #type: ignore
 
 from athanor.core.launcher import Launcher,LauncherState
 from athanor.config import NWJS_DIR
+from athanor.core.i18n import _
 
 logger=logging.getLogger()
 
@@ -39,7 +40,7 @@ class AthanorMainWindow(Adw.ApplicationWindow):
     def on_dir_row_activated(self, row):
 
         dialog = Gtk.FileDialog()
-        dialog.set_title("Select Game Directory")
+        dialog.set_title(_("Select Game Directory"))
         dialog.select_folder(self, None, self.on_folder_selected, row)
 
     def on_folder_selected(self, dialog,result,row:Adw.ActionRow)->None:
@@ -92,7 +93,7 @@ class AthanorMainWindow(Adw.ApplicationWindow):
             row.set_sensitive(True)
 
             btn.set_sensitive(False)
-            btn.set_title("Launch")
+            btn.set_title(_("Launch"))
             btn.set_start_icon_name("media-playback-start-symbolic")
             btn.add_css_class("suggested-action")
         elif state == LauncherState.READY:
@@ -101,7 +102,7 @@ class AthanorMainWindow(Adw.ApplicationWindow):
             row.set_sensitive(True)
 
             btn.set_sensitive(True)
-            btn.set_title("Launch")
+            btn.set_title(_("Launch"))
             btn.set_start_icon_name("media-playback-start-symbolic")
             btn.add_css_class("suggested-action")
         elif state == LauncherState.RUNNING:
@@ -110,6 +111,6 @@ class AthanorMainWindow(Adw.ApplicationWindow):
             row.set_sensitive(False)
 
             btn.set_sensitive(True)
-            btn.set_title("Stop")
+            btn.set_title(_("Stop"))
             btn.set_start_icon_name("media-playback-stop-symbolic")
             btn.add_css_class("destructive-action")

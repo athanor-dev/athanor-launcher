@@ -1,0 +1,4 @@
+data/ui/main.blp
+data/io.github.athanor_dev.athanor-launcher.desktop.in
+data/io.github.athanor_dev.athanor-launcher.metainfo.xml.in
+src/athanor/ui/AthanorMainWindow.py
