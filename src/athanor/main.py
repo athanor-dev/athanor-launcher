@@ -2,6 +2,7 @@ import sys
 from pathlib import Path
 from athanor import config
 from athanor.core.i18n import setup_i18n
+from athanor.core.game_manager import GameManager
 import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
@@ -9,12 +10,16 @@ from gi.repository import Gio, Adw, GLib #type:ignore
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
+import os
+data_dir = os.environ.get('XDG_DATA_HOME', os.path.expanduser('~/.local/share'))
+
 class App(Adw.Application):
     def __init__(self):
         super().__init__(
             application_id=config.APP_ID,
             flags=Gio.ApplicationFlags.FLAGS_NONE
         )
+        self.game_manager=GameManager(Path(data_dir)/"games")
 
     
     def do_startup(self) -> None:
@@ -33,8 +38,9 @@ class App(Adw.Application):
     def do_activate(self):
         win=self.props.active_window
         if not win:
-            from athanor.ui.AthanorMainWindow import AthanorMainWindow
-            win = AthanorMainWindow(application=self)
+            from athanor.ui.window.main_window import Mainwindow
+            win = Mainwindow(game_manager=self.game_manager,application=self)
+            self.nav_view=win.navigation_view
         win.present()
 
 if __name__ == "__main__":

@@ -5,15 +5,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-17 18:29+0800\n"
-"PO-Revision-Date: 2026-03-17 20:17+0800\n"
+"POT-Creation-Date: 2026-04-05 02:21+0800\n"
+"PO-Revision-Date: 2026-04-05 02:22+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Poedit 3.9\n"
 
 #: data/ui/main.blp:14
 msgid "Game Directory"
@@ -28,7 +28,7 @@ msgstr ""
 "由于权限问题，目录可能无法正常启动。\n"
 "建议您手动授权 Athanor 访问目录，并完全重启 Athanor 。"
 
-#: data/ui/main.blp:33
+#: data/ui/main.blp:33 data/ui/page/game_detail_page.blp:30
 msgid "Network"
 msgstr "网络"
 
@@ -36,18 +36,41 @@ msgstr "网络"
 msgid "Hardware Acceleration (GPU)"
 msgstr "硬件加速（GPU）"
 
+#: data/ui/page/add_game_page.blp:13
+msgid "select a folder"
+msgstr "选择游戏目录"
+
+#: data/ui/page/add_game_page.blp:17
+msgid "Name"
+msgstr "名称"
+
+#: data/ui/page/add_game_page.blp:22
+msgid "Add"
+msgstr "新建"
+
+#: data/ui/page/game_detail_page.blp:20 src/athanor/ui/AthanorMainWindow.py:96
+#: src/athanor/ui/AthanorMainWindow.py:105
+#: src/athanor/ui/page/game_detail_page.py:58
+msgid "Launch"
+msgstr "启动"
+
+#: data/ui/page/game_detail_page.blp:35
+msgid "GPU"
+msgstr "GPU"
+
+#: data/ui/page/game_detail_page.blp:42
+msgid "Remove"
+msgstr "删除"
+
+#: src/athanor/core/i18n.py:34
+msgid "i18n ok"
+msgstr "i18n 正常"
+
 #: src/athanor/ui/AthanorMainWindow.py:43
 msgid "Select Game Directory"
 msgstr "选择游戏目录"
 
-#: src/athanor/ui/AthanorMainWindow.py:96
-#: src/athanor/ui/AthanorMainWindow.py:105
-msgid "Launch"
-msgstr "启动"
-
 #: src/athanor/ui/AthanorMainWindow.py:114
+#: src/athanor/ui/page/game_detail_page.py:53
 msgid "Stop"
 msgstr "停止"
-
-msgid "i18n ok"
-msgstr "i18n 正常"

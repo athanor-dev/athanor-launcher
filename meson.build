@@ -1,5 +1,5 @@
 project('athanor',
-  version: '0.1.0',
+  version: '0.2.0',
   meson_version: '>= 0.59.0'
 )
 
@@ -29,11 +29,24 @@ subdir('po')
 
 
 blueprint_compiler = find_program('blueprint-compiler')
-blueprints = custom_target('blueprints',
-  input: files('data/ui/main.blp'),
-  output: 'main.ui',
-  command: [blueprint_compiler, 'compile', '@INPUT@', '--output', '@OUTPUT@'],
-)
+blueprint_files = [
+  'data/ui/page/add_game_page.blp',
+  'data/ui/page/game_detail_page.blp',
+  'data/ui/page/home_page.blp',
+  'data/ui/widget/file_chooser_row.blp',
+  'data/ui/widget/game_row.blp',
+  'data/ui/window/main_window.blp'
+]
+
+blueprints = []
+foreach blp : blueprint_files
+  blueprints += custom_target(
+    blp.underscorify(),
+    input: blp,
+    output: '@BASENAME@.ui',
+    command: [blueprint_compiler, 'compile', '--output', '@OUTPUT@', '@INPUT@']
+  )
+endforeach
 
 resources = gnome.compile_resources(
   'athanor',

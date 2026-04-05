@@ -1,0 +1,20 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $HomePage: Adw.NavigationPage {
+    title: "Athanor";
+    Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {
+            [start]
+            Gtk.Button add_game_button {
+                icon-name: "list-add-symbolic";
+                clicked => $on_add_game_button_clicked();
+            }
+        }
+
+        content: Adw.PreferencesPage {
+            Adw.PreferencesGroup games_group {}
+        };  
+    }
+}

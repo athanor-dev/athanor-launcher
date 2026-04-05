@@ -1,0 +1,52 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $GameDetailPage: Adw.NavigationPage {
+    Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {}
+
+        content: Adw.PreferencesPage {
+            Adw.PreferencesGroup {
+                Gtk.Label title_label {
+                    styles [
+                        "title-1",
+                    ]
+                }
+            }
+
+            Adw.PreferencesGroup {
+                Adw.ButtonRow launch_button {
+                    title: _("Launch");
+                    start-icon-name: "media-playback-start-symbolic";
+                    action-name: "game.launch_or_stop";
+                    styles ["suggested-action"]
+                }
+            }
+
+            Adw.PreferencesGroup {
+                Adw.SwitchRow network_switch {
+                    icon-name: "network-wired-symbolic";
+                    title: _("Network");
+                }
+
+                Adw.SwitchRow gpu_switch {
+                    icon-name: "computer-symbolic";
+                    title: _("GPU");
+                }
+            }
+
+            Adw.PreferencesGroup {
+                Adw.ButtonRow delete_button {
+                    start-icon-name: "user-trash-symbolic";
+                    title: _("Remove");
+                    action-name: "game.remove";
+                    styles [
+                        "destructive-action",
+                    ]
+                        
+                }
+            }
+        };
+    }
+}

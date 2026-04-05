@@ -1,0 +1,30 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $AddGamePage : Adw.NavigationPage {
+    Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {
+          
+        }
+        content: Adw.PreferencesPage{
+            Adw.PreferencesGroup {
+                $FileChooserRow file_row{
+                    title: _("select a folder");
+                    method: select-folder;
+                }
+                Adw.EntryRow name_entry{
+                    title: _("Name");
+                }
+            }
+            Adw.PreferencesGroup {
+                Adw.ButtonRow add_button{
+                    title: _("Add");
+                    start-icon-name: "list-add-symbolic";
+                    styles ["suggested-action"]
+                    activated => $on_add_button_activated();
+                }
+            }
+        };
+    }
+}

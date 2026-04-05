@@ -1,0 +1,21 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $GameRow : Adw.ActionRow {
+    icon-name: "input-gaming-symbolic";
+    activatable: true;
+    activated => $on_launch_row_activated();
+    sensitive: true;
+    Gtk.Button launch_button{
+        icon-name: "media-playback-start-symbolic";
+        action-name: "game.launch_or_stop";
+        styles ["flat","circular"]
+        sensitive: true;
+    }
+    Gtk.Button {
+        icon-name: "view-more-horizontal-symbolic";
+        action-name: "game.open_detail_page";
+        styles ["flat","circular"]
+        sensitive: true;
+    }
+}

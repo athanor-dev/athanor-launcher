@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/io/github/athanor-dev/athanor/ui">
-    <file preprocess="xml-stripblanks">main.ui</file>
+    <file preprocess="xml-stripblanks">add_game_page.ui</file>
+    <file preprocess="xml-stripblanks">game_detail_page.ui</file>
+    <file preprocess="xml-stripblanks">home_page.ui</file>
+    <file preprocess="xml-stripblanks">file_chooser_row.ui</file>
+    <file preprocess="xml-stripblanks">game_row.ui</file>
+    <file preprocess="xml-stripblanks">main_window.ui</file>
   </gresource>
 </gresources>

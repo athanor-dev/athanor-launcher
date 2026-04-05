@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-17 18:29+0800\n"
+"POT-Creation-Date: 2026-04-05 02:21+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgid ""
 "application."
 msgstr ""
 
-#: data/ui/main.blp:33
+#: data/ui/main.blp:33 data/ui/page/game_detail_page.blp:30
 msgid "Network"
 msgstr ""
 
@@ -36,15 +36,41 @@ msgstr ""
 msgid "Hardware Acceleration (GPU)"
 msgstr ""
 
+#: data/ui/page/add_game_page.blp:13
+msgid "select a folder"
+msgstr ""
+
+#: data/ui/page/add_game_page.blp:17
+msgid "Name"
+msgstr ""
+
+#: data/ui/page/add_game_page.blp:22
+msgid "Add"
+msgstr ""
+
+#: data/ui/page/game_detail_page.blp:20 src/athanor/ui/AthanorMainWindow.py:96
+#: src/athanor/ui/AthanorMainWindow.py:105
+#: src/athanor/ui/page/game_detail_page.py:58
+msgid "Launch"
+msgstr ""
+
+#: data/ui/page/game_detail_page.blp:35
+msgid "GPU"
+msgstr ""
+
+#: data/ui/page/game_detail_page.blp:42
+msgid "Remove"
+msgstr ""
+
+#: src/athanor/core/i18n.py:34
+msgid "i18n ok"
+msgstr ""
+
 #: src/athanor/ui/AthanorMainWindow.py:43
 msgid "Select Game Directory"
 msgstr ""
 
-#: src/athanor/ui/AthanorMainWindow.py:96
-#: src/athanor/ui/AthanorMainWindow.py:105
-msgid "Launch"
-msgstr ""
-
 #: src/athanor/ui/AthanorMainWindow.py:114
+#: src/athanor/ui/page/game_detail_page.py:53
 msgid "Stop"
 msgstr ""
