@@ -19,9 +19,3 @@ That is why we are building Athanor — a container as precise and secure as an 
     Built on strict Flatpak sandbox isolation. Your system stays pristine while the game runs securely "in the cage."
 *   **Evolved:**
     Delivering an experience that surpasses the original Windows version: intelligent storage deduplication, unified save management, and version control.
-
-### 🚧 Project Status
-
-**[In Early Development / Pre-Alpha]**
-
-If this project interests you, please click the Star ⭐ in the top right to follow our progress!
