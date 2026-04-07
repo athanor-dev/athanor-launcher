@@ -102,10 +102,15 @@ class Game(GObject.GObject):
 
         sandbox.expose(self.path_save,w=True)
 
+        app:App=Gio.Application.get_default()#type:ignore
+        assert(app is not None)
+        sandbox.expose(app.proxy_dbus_path,w=True)
+        sandbox.env("DBUS_SESSION_BUS_ADDRESS",f"unix:path={app.proxy_dbus_path}")
+
         sandbox.directory(self.path_program)
 
         self._process=sandbox.Popen([
-            "sh","-c",'ln -s "$1" "$2" && "$3" --no-sandbox "$4"',"--",
+            "sh","-c",'ln -s "$1" "$2" && "$3" --no-sandbox --disable-setuid-sandbox "$4"',"--",
             str(self.path_save),str(self.save_dir_target),
             str(Path(NWJS_DIR)/"nw"),str(self.path_program)
         ])

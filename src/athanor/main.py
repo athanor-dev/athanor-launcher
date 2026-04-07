@@ -20,8 +20,8 @@ class App(Adw.Application):
             flags=Gio.ApplicationFlags.FLAGS_NONE
         )
         self.game_manager=GameManager(Path(data_dir)/"games")
-
-    
+        from athanor.core import dbus_proxy
+        self.proxy_dbus_path=dbus_proxy.start()    
     def do_startup(self) -> None:
         Adw.Application.do_startup(self)
         self.load_resource()
